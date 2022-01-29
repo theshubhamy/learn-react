@@ -1,6 +1,6 @@
 import React from "react";
 import "./ExpenseItem.css";
-import ExpenseDate from "../components/expenseitem/ExpenseDate";
+import ExpenseDate from "./ExpenseDate";
 
 const expenseItem = (props) => {
   return (
@@ -8,7 +8,7 @@ const expenseItem = (props) => {
       <div className="expense-item">
         <ExpenseDate date={props.date} />
         <div className="expense-description">
-          <h2>{props.title}</h2>
+          <h2 className="expense-description-title">{props.title}</h2>
           <div className="expense-amount">${props.amount}</div>
         </div>
       </div>
