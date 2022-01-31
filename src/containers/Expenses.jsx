@@ -3,6 +3,7 @@ import NewExpenses from "../components/newExpenses/NewExpenses";
 import ExpenseFilter from "../components/expenses/ExpenseFilter";
 import "./Expenses.css";
 import ExpenseList from "../components/expenses/ExpenseList";
+import ExpenseChart from "../components/expenses/ExpenseChart";
 const Expenses = () => {
   //const currentYear = new Date().getFullYear();
   const [filteredYear, setFilteredYear] = useState("2022");
@@ -57,11 +58,13 @@ const Expenses = () => {
   return (
     <>
       <NewExpenses onAddExpense={addExpenseHandler} />
+
       <div className="expense">
         <ExpenseFilter
           selectedYear={filteredYear}
           onChangeFilter={filterChangeHandler}
         />
+        <ExpenseChart expenses={filterExpenses} />
 
         <ExpenseList item={filterExpenses} />
       </div>
