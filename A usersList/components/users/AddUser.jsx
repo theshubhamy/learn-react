@@ -10,7 +10,8 @@ const AddUser = (props) => {
   
   const [userName, setUserName] = useState("");
   const [age, setAge] = useState("");
-  const [error, setError] = useState({});
+  const [error, setError] = useState(null);
+
   const addUserHandler = (event) => {
     event.preventDefault();
     if (userName.trim().length === 0 || age.trim().length === 0) {
