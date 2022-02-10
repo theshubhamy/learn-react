@@ -1,7 +1,7 @@
 .login {
   width: 90%;
   max-width: 40rem;
-  margin: 2rem auto;
+  margin: 10rem auto;
   padding: 2rem;
 }
 
@@ -52,5 +52,4 @@
     align-items: center;
     flex-direction: row;
   }
-
 }
